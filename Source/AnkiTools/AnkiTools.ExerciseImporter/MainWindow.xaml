@@ -1,0 +1,54 @@
+﻿<Window x:Class="AnkiTools.ExerciseImporter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid Margin="15">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <TextBlock Text="Topic" Grid.Row="0" Grid.Column="0"/>
+        <TextBox Grid.Row="0" Grid.Column="1" x:Name="tbxTopic"/>
+
+        <TextBlock Text="Exercise Files Directory" Grid.Row="1" Grid.Column="0"/>
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBox Margin="0 0 15 0" x:Name="tbxExerciseFileDirectory" IsReadOnly="True"/>
+            <Button Content="Change" Grid.Column="1" x:Name="btnChangeExerciseFilesDirectory" Click="btnChangeExerciseFilesDirectory_Click_1"/>
+        </Grid>
+
+        <TextBlock Text="Anki Directory" Grid.Row="2" Grid.Column="0"/>
+        <Grid Grid.Row="2" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBox Margin="0 0 15 0" x:Name="tbxAnkiDirectory" IsReadOnly="True"/>
+            <Button Content="Change" Grid.Column="1" x:Name="btnChangeAnkiDirectory" Click="btnChangeAnkiDirectory_Click_1"/>
+        </Grid>
+
+        <TextBlock Text="Anki Import File" Grid.Row="3" Grid.Column="0"/>
+        <Grid Grid.Row="3" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBox Margin="0 0 15 0" x:Name="tbxAnkiImportFile" IsReadOnly="True"/>
+            <Button Content="Change" Grid.Column="1" x:Name="btnChangeAnkiImportFile" Click="btnChangeAnkiImportFile_Click_1"/>
+        </Grid>
+        
+        <Button Grid.Row="4" Grid.Column="1" Content="Export" x:Name="btnExport" Click="btnExport_Click_1"/>
+    </Grid>
+</Window>
